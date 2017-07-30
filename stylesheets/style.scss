@@ -20,14 +20,125 @@ body {
 }
 
 .header-row {
-  height: 100vh;
-  background-image: url("https://static.pexels.com/photos/227675/pexels-photo-227675.jpeg");
+  height: 80vh;
+  // background-image: url("../images/building.png");
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+
+.malta-header-title {
+  background: linear-gradient(to right, #B5AC49, #3CA55C);
+  position: absolute;
+  top:80px;
+  left: 100px;
+  z-index: 2;
+  transform: rotate(323deg);
+  width: 450px;
+  height: 400px;
+}
+
+.malta-header-gallery {
+  position: absolute;
+  top: 30px;
+  right: 60px;
+  height: 76vh;
+  box-sizing: border-box;
+  border-radius: 3px;
+  width: 520px;
+  overflow: hidden;
+}
+
+.item-gallery-container {
+  display: inline-block;
+  position: absolute;
+  width: 32%;
+  box-sizing: border-box;
+  background-position: center;
+}
+
+.first-col-image1 {
+  top: 0;
+  left: 0;
+  height: 30%;
+  background-image: url("../images/image1.JPG");
   background-size: cover;
+}
+
+.first-col-image2 {
+  top: 32%;
+  left: 0;
+  height: 50%;
+  background-image: url("../images/image2.JPG");
+  background-size: cover;
+
+}
+
+.first-col-image3 {
+  top: 84%;
+  left: 0;
+  height: 16%;
+  background-image: url("../images/image1.JPG");
+  background-size: cover;
+}
+
+.second-col-image1 {
+  top: 0;
+  left: 34%;
+  height: 25%;
+  background-image: url("../images/image2.JPG");
+  background-size: cover;
+}
+
+.second-col-image2 {
+  top: 27%;
+  left: 34%;
+  height: 73%;
+  background-image: url("../images/image2.JPG");
+  background-size: cover;
+}
+
+.third-col-image1 {
+  top: 0;
+  left: 68%;
+  height: 73%;
+  background-image: url("../images/image3.JPG");
+  background-size: cover;
+}
+
+#typed {
+  font-weight: 300;
+}
+
+.third-col-image2 {
+  top: 75%;
+  left: 68%;
+  height: 25%;
+  background-image: url("../images/image1.JPG");
+  background-size: cover;
+}
+
+.main-title {
+  font-family: $title-font;
+  transform: rotate(37deg);
+  font-size: 17rem;
+  margin: 20px 0px 0px 100px;
+}
+
+.malta-header-title h2 {
+  font-weight: 100;
+  font-size: 4.7rem;
+  color: $light-font;
+  line-height: 5.3rem;
+  transform: rotate(37deg);
+  margin: 0px 0px 0px -20px;
 }
 
 .location-row {
   text-align: center;
-  padding: 40px 100px;
+  padding: 60px 100px;
   position: relative;
   // height: 800px;
 }
@@ -88,6 +199,22 @@ body {
   left: 55%;
 }
 
+.text-wrap-design{
+  width: 300px;
+  display: inline-block;
+  position: absolute;
+  top: 570px;
+  left: 5%;
+}
+
+.text-wrap-design-two{
+  width: 350px;
+  display: inline-block;
+  position: absolute;
+  top: 1040px;
+  right: 5%;
+}
+
 .high-word {
   background: linear-gradient(to right, #B5AC49, #3CA55C);
 -webkit-background-clip: text;
@@ -104,8 +231,23 @@ body {
   position: relative;
 }
 
+.collapsible-header {
+  font-family: $title-font;
+  font-size: 2.5rem;
+  font-weight: 100;
+}
+
+.list-features li {
+  font-size: 2rem;
+  font-weight: 100;
+}
+
 .view-row {
   position: relative;
+}
+
+.image-dpto-plano {
+  width: 70%;
 }
 
 .planos-row {
@@ -117,13 +259,26 @@ body {
 }
 
 .planos-row h2 {
-  font-weight: 100;
-  margin: 0px 0px 40px 0px;
+  font-weight: 300;
+  margin: 0px 0px 10px 0px;
   color: $dark-font;
+  font-family: $title-font;
 }
 
+.planos-row h3 {
+  font-weight: 100;
+  margin: 0px 0px 30px 20%;
+  box-sizing: border-box;
+  color: $dark-font;
+  font-size: 2rem;
+  width: 60%;
+}
+
+
 .carousel .carousel-item>img {
-  width: 100%;
+  width: 80%;
+  margin: -20px 0px 0px 0px;
+  z-index: 2;
 }
 
 .carousel .indicators .indicator-item.active {
@@ -134,14 +289,18 @@ body {
   background: linear-gradient(to right, #B5AC49, #3CA55C);
 }
 
-.carousel {
-  float: right;
-  width: 50%;
-}
+// .carousel {
+//   float: right;
+//   width: 50%;
+// }
 
 .planos-description {
   display: flex;
   flex-direction: row;
+}
+
+.text-planos {
+  padding: 10px 30px;
 }
 
 .text-planos h3 {
@@ -151,7 +310,7 @@ body {
   margin: 0px 0px 20px 0px;
 }
 
-.text-planos p {
+.text-planos li {
   font-weight: 100;
   color: $dark-font;
   font-size: 1.3rem;
@@ -164,6 +323,7 @@ body {
 }
 
 .design-row {
+  text-align: center;
   position: relative;
   padding: 50px;
   height: 800px;
@@ -377,22 +537,22 @@ input:not([type]).validate+label, input[type=text]:not(.browser-default).validat
   background-repeat: no-repeat;
   background-size: cover;
   height: 500px;
-  background-image: url("../images/asuncion2.jpg");
+  background-image: url("../images/asuncion2_ex.jpg");
   width: 100%;
 }
 
-.landscape::after {
-    height: 500px;
-    display: block;
-    position: absolute;
-    bottom: 0%;
-    width: 100%;
-    left: 0%;
-    background: #000;;
-    content: '';
-    opacity: 0.3;
-    overflow: hidden;
-}
+// .landscape::after {
+//     height: 500px;
+//     display: block;
+//     position: absolute;
+//     bottom: 0%;
+//     width: 100%;
+//     left: 0%;
+//     background: linear-gradient(to bottom, #fff,#fff,#fff,#fff, rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0.9),rgba(255,255,255,0.8),rgba(255,255,255,0.7),rgba(255,255,255,0.6),rgba(255,255,255,0));
+//     content: '';
+//     opacity: 0.5;
+//     overflow: hidden;
+// }
 
 .point-landscape {
   position: absolute;
